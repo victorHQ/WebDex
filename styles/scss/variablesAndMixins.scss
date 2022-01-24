@@ -1,0 +1,17 @@
+// Variables and Mixins
+
+//Colors
+$text-primary: #b6b6b6;
+$text-secondary: #ececec;
+$bg-primary: #23232e;
+$bg-secondary: #141418;
+
+//Transition
+$transition-speed: 600ms;
+
+//Mixins
+@mixin organize-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

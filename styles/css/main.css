@@ -1,0 +1,115 @@
+/* Global */
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans";
+}
+
+body {
+  background-color: #1f2029;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding-bottom: 100px;
+  color: black;
+  font-size: 15px;
+}
+
+body::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6749b8b9;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #6649b8;
+}
+
+#main {
+  transition: margin-left 600ms;
+}
+
+h1 {
+  text-shadow: #000 1px 2px 1px;
+  color: white;
+  opacity: 0.4;
+  font-size: 5rem;
+  text-align: center;
+  margin: 1% auto;
+  transition: 600ms;
+}
+
+.poke-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-between;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.poke-container .pokemon {
+  border-radius: 20px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  max-width: 160px;
+}
+
+.poke-container .pokemon:hover {
+  transition: all 0.2s ease-out;
+  box-shadow: 10px 10px 0px black;
+  margin-top: -2px;
+}
+
+.poke-container .pokemon .img-container {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+}
+
+.poke-container .pokemon .img-container img {
+  margin-top: 20px;
+  max-width: 90%;
+}
+
+.poke-container .pokemon .info {
+  margin-top: 20px;
+}
+
+.poke-container .pokemon .number {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-size: 0.8em;
+  padding: 5px 10px;
+}
+
+.poke-container .pokemon .name {
+  margin: 15px 0 7px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  transition: 600ms;
+}
+
+.poke-container .pokemon .name:hover {
+  color: #fff;
+}
+
+@media screen and (max-width: 639px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

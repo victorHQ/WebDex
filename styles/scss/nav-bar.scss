@@ -1,0 +1,106 @@
+@import './variablesAndMixins.scss';
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: $bg-primary;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: width $transition-speed ease;
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  a {
+    padding: 8px 8px 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: $text-primary;
+
+    display: flex;
+    height: 5rem;
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: $transition-speed;
+  }
+
+  .nav-link img {
+    margin-left: 0.5rem;
+  }
+
+  .nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background: $bg-secondary;
+    color: $text-secondary;
+    height: 5rem;
+  }
+
+  #contact a {
+    @include organize-center;
+
+    margin-top: 2rem;
+  }
+
+  #contact .fab {
+    color: $text-primary;
+    filter: grayscale(100%) opacity(0.7);
+    transition: $transition-speed;
+
+    &:hover {
+      filter: grayscale(0%) opacity(1);
+      color: $text-secondary;
+    }
+  }
+
+  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+
+    &:hover {
+      filter: grayscale(0%) opacity(1);
+      color: $text-secondary;
+    }
+  }
+}
+
+.open-nav {
+  font-size: 30px;
+  cursor: pointer;
+  margin: 2rem;
+  width: 10rem;
+  color: white;
+  opacity: 0.4;
+
+  filter: grayscale(100%) opacity(0.7);
+  transition: $transition-speed;
+
+  &:hover {
+    filter: grayscale(0%) opacity(1);
+    color: $text-secondary;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .mySidenav {
+    width: 25%;
+  }
+}

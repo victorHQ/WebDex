@@ -1,0 +1,104 @@
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: #23232e;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: width 600ms ease;
+  overflow: scroll;
+}
+
+.sidenav::-webkit-scrollbar {
+  display: none;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #b6b6b6;
+  display: flex;
+  height: 5rem;
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: 600ms;
+}
+
+.sidenav .nav-link img {
+  margin-left: 0.5rem;
+}
+
+.sidenav .nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: #141418;
+  color: #ececec;
+  height: 5rem;
+}
+
+.sidenav #contact a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.sidenav #contact .fab {
+  color: #b6b6b6;
+  filter: grayscale(100%) opacity(0.7);
+  transition: 600ms;
+}
+
+.sidenav #contact .fab:hover {
+  filter: grayscale(0%) opacity(1);
+  color: #ececec;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.sidenav .closebtn:hover {
+  filter: grayscale(0%) opacity(1);
+  color: #ececec;
+}
+
+.open-nav {
+  font-size: 30px;
+  cursor: pointer;
+  margin: 2rem;
+  width: 10rem;
+  color: white;
+  opacity: 0.4;
+  filter: grayscale(100%) opacity(0.7);
+  transition: 600ms;
+}
+
+.open-nav:hover {
+  filter: grayscale(0%) opacity(1);
+  color: #ececec;
+  opacity: 1;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .mySidenav {
+    width: 25%;
+  }
+}
+/*# sourceMappingURL=nav-bar.css.map */

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>WebDex | PokeDex</title>
+    <link rel="icon" href="./styles/icon/pokeball.png"></link>
+
+    <!-- Font Open Sans -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/css/main.css">
+    <link rel="stylesheet" href="./styles/css/nav-bar.css">
+    <link rel="stylesheet" href="./styles/css/utils.css">
+    <link rel="stylesheet" href="./styles/css/loading.css">
+  </head>
+
+  <body>
+    <!-- partial:index.partial.html -->
+    <!-- Design inspired by this Dribbble shot: https://dribbble.com/shots/5611109--Pokemon -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+      <!-- SideNav of regions -->
+      <div id="myRegions">
+        <a href="#" class="nav-link">
+          <span id="kanto" class="link-text">
+            <img
+              src="./styles/icon/bulbasaur.png"
+              alt="Kanto - bulbasaur"
+              title="Kanto - bulbasaur"
+            />
+            Kanto
+          </span>
+        </a>
+        <a href="#" class="nav-link">
+          <span id="johto" class="link-text">
+            <img
+              src="./styles/icon/cyndaquil.png"
+              alt="Johto - cyndaquil"
+              title="Johto - cyndaquil"
+            />
+            Johto
+          </span>
+        </a>
+        <a href="#" class="nav-link">
+          <span id="hoenn" class="link-text">
+            <img
+              src="./styles/icon/mudkip.png"
+              alt="Hoenn - mudkip"
+              title="Hoenn - mudkip"
+            />
+            Hoenn
+          </span>
+        </a>
+        <a href="#" class="nav-link">
+          <span id="sinnoh" class="link-text">
+            <img
+              src="./styles/icon/turtwig.png"
+              alt="Sinnoh - turtwig"
+              title="Sinnoh - turtwig"
+            />
+            Sinnoh
+          </span>
+        </a>
+        <a href="#" class="nav-link">
+          <span id="unova" class="link-text">
+            <img
+              src="./styles/icon/tepig.png"
+              alt="Unova - tepig"
+              title="Unova - tepig"
+            />
+            Unova
+          </span>
+        </a>
+        <a href="#" class="nav-link">
+          <span id="kalos" class="link-text">
+            <img
+              src="./styles/icon/froakie.png"
+              alt="Kalos - froakie"
+              title="Kalos - froakie"
+            />
+            Kalos
+          </span>
+        </a>
+        <a href="#" class="nav-link">
+          <span id="alola" class="link-text">
+            <img
+              src="./styles/icon/rowlet.png"
+              alt="Alola - rowlet"
+              title="Alola - rowlet"
+            />
+            Alola
+          </span>
+        </a>
+        <a href="#" class="nav-link">
+          <span id="galar" class="link-text">
+            <img
+              src="./styles/icon/scorbunny.png"
+              alt="Galar - scorbunny"
+              title="Galar - scorbunny"
+            />
+            Galar
+          </span>
+        </a>
+      </div>
+
+      <div id="contact"><a href="https://github.com/victorHQ" title="victorHQ" target="_blank"><i class="fab fa-github"></i></a></div>
+    </div>
+
+    <span class="open-nav" onclick="openNav()">&#9776; Regions</span>
+
+    <main id="main">
+      <h1 id="title-pokedex">PokeDex</h1>
+      
+      <div id="loader"></div>
+
+      <div id="poke_container" class="poke-container"></div>
+    </main>
+
+    <a id="scroll-to-top"><i class="fas fa-angle-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="./scripts/app.js" type="module"></script>
+    <script src="./scripts/json/pokemonRegionsJSON.json" type="text/javascript"></script>
+    <script src="./scripts/navbar.js"></script>
+  </body>
+</html>
