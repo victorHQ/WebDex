@@ -18,44 +18,53 @@
   }
 
   a {
-    padding: 8px 8px 8px;
     text-decoration: none;
-    font-size: 25px;
+    filter: grayscale(100%) opacity(0.7);
+    transition: $transition-speed;
+
+    &:hover{
+      filter: grayscale(0%) opacity(1);
+      color: $text-secondary;
+    }
+  }
+
+  .nav-link {
+    padding: 8px 8px 8px;
+    font-size: 20px;
     color: $text-primary;
 
     display: flex;
-    height: 5rem;
+    align-items: center;
+
     text-decoration: none;
     filter: grayscale(100%) opacity(0.7);
     transition: $transition-speed;
   }
 
   .nav-link img {
+    z-index: 0;
+
     margin-left: 0.5rem;
+    margin-bottom: 1rem;
+    align-self: center;
   }
 
   .nav-link:hover {
     filter: grayscale(0%) opacity(1);
     background: $bg-secondary;
     color: $text-secondary;
-    height: 5rem;
+
+    cursor: pointer;
   }
 
   #contact a {
     @include organize-center;
-
     margin-top: 2rem;
   }
 
   #contact .fab {
     color: $text-primary;
-    filter: grayscale(100%) opacity(0.7);
-    transition: $transition-speed;
-
-    &:hover {
-      filter: grayscale(0%) opacity(1);
-      color: $text-secondary;
-    }
+    font-size: 32px;
   }
 
   .closebtn {

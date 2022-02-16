@@ -125,7 +125,6 @@ export default class Pokedex{
 
             switch (pokemonEvent) {
                 case pokemonEvent.closest(regions.kanto.id):
-                    console.log(pokemonEvent)
                     this.pokemonNumber = regions.kanto.number;
                     this.index = regions.kanto.index;
                     this.fetchPokemons();

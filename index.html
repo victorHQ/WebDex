@@ -12,6 +12,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="./styles/css/main.css">
     <link rel="stylesheet" href="./styles/css/nav-bar.css">
+    <link rel="stylesheet" href="./styles/css/search-bar.css">
     <link rel="stylesheet" href="./styles/css/utils.css">
     <link rel="stylesheet" href="./styles/css/loading.css">
   </head>
@@ -19,97 +20,87 @@
   <body>
     <!-- partial:index.partial.html -->
     <!-- Design inspired by this Dribbble shot: https://dribbble.com/shots/5611109--Pokemon -->
+    <header>
+      <span class="open-nav" onclick="openNav()">&#9776; Regions</span>
+      
+      <div class="searchBox">
+        <input class="searchInput"type="text" name="search" onkeyup="searchPokemons()" placeholder="Search...">
+      </div>
+    </header>
+
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
       <!-- SideNav of regions -->
       <div id="myRegions">
-        <a href="#" class="nav-link">
-          <span id="kanto" class="link-text">
-            <img
-              src="./styles/icon/bulbasaur.png"
-              alt="Kanto - bulbasaur"
-              title="Kanto - bulbasaur"
-            />
-            Kanto
-          </span>
-        </a>
-        <a href="#" class="nav-link">
-          <span id="johto" class="link-text">
+        <span id="kanto" class="link-text nav-link">
+          <img
+            src="./styles/icon/bulbasaur.png"
+            alt="Kanto - bulbasaur"
+            title="Kanto - bulbasaur"
+          />
+          Kanto
+        </span>
+          <span id="johto" class="nav-link link-text">
             <img
               src="./styles/icon/cyndaquil.png"
               alt="Johto - cyndaquil"
               title="Johto - cyndaquil"
             />
             Johto
-          </span>
-        </a>
-        <a href="#" class="nav-link">
-          <span id="hoenn" class="link-text">
-            <img
-              src="./styles/icon/mudkip.png"
-              alt="Hoenn - mudkip"
-              title="Hoenn - mudkip"
-            />
-            Hoenn
-          </span>
-        </a>
-        <a href="#" class="nav-link">
-          <span id="sinnoh" class="link-text">
-            <img
-              src="./styles/icon/turtwig.png"
-              alt="Sinnoh - turtwig"
-              title="Sinnoh - turtwig"
-            />
-            Sinnoh
-          </span>
-        </a>
-        <a href="#" class="nav-link">
-          <span id="unova" class="link-text">
-            <img
-              src="./styles/icon/tepig.png"
-              alt="Unova - tepig"
-              title="Unova - tepig"
-            />
-            Unova
-          </span>
-        </a>
-        <a href="#" class="nav-link">
-          <span id="kalos" class="link-text">
-            <img
-              src="./styles/icon/froakie.png"
-              alt="Kalos - froakie"
-              title="Kalos - froakie"
-            />
-            Kalos
-          </span>
-        </a>
-        <a href="#" class="nav-link">
-          <span id="alola" class="link-text">
-            <img
-              src="./styles/icon/rowlet.png"
-              alt="Alola - rowlet"
-              title="Alola - rowlet"
-            />
-            Alola
-          </span>
-        </a>
-        <a href="#" class="nav-link">
-          <span id="galar" class="link-text">
-            <img
-              src="./styles/icon/scorbunny.png"
-              alt="Galar - scorbunny"
-              title="Galar - scorbunny"
-            />
-            Galar
-          </span>
-        </a>
+        </span>
+        <span id="hoenn" class="nav-link link-text">
+          <img
+            src="./styles/icon/mudkip.png"
+            alt="Hoenn - mudkip"
+            title="Hoenn - mudkip"
+          />
+          Hoenn
+        </span>
+        <span id="sinnoh" class="nav-link link-text">
+          <img
+            src="./styles/icon/turtwig.png"
+            alt="Sinnoh - turtwig"
+            title="Sinnoh - turtwig"
+          />
+          Sinnoh
+        </span>
+        <span id="unova" class="nav-link link-text">
+          <img
+            src="./styles/icon/tepig.png"
+            alt="Unova - tepig"
+            title="Unova - tepig"
+          />
+          Unova
+        </span>
+        <span id="kalos" class="nav-link link-text">
+          <img
+            src="./styles/icon/froakie.png"
+            alt="Kalos - froakie"
+            title="Kalos - froakie"
+          />
+          Kalos
+        </span>
+        <span id="alola" class="nav-link link-text">
+          <img
+            src="./styles/icon/rowlet.png"
+            alt="Alola - rowlet"
+            title="Alola - rowlet"
+          />
+          Alola
+        </span>
+        <span id="galar" class="nav-link link-text">
+          <img
+            src="./styles/icon/scorbunny.png"
+            alt="Galar - scorbunny"
+            title="Galar - scorbunny"
+          />
+          Galar
+        </span>
       </div>
 
       <div id="contact"><a href="https://github.com/victorHQ" title="victorHQ" target="_blank"><i class="fab fa-github"></i></a></div>
     </div>
-
-    <span class="open-nav" onclick="openNav()">&#9776; Regions</span>
 
     <main id="main">
       <h1 id="title-pokedex">PokeDex</h1>
@@ -125,5 +116,6 @@
     <script src="./scripts/app.js" type="module"></script>
     <script src="./scripts/json/pokemonRegionsJSON.json" type="text/javascript"></script>
     <script src="./scripts/navbar.js"></script>
+    <script src="./scripts/search.js"></script>
   </body>
 </html>

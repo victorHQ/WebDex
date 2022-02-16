@@ -17,26 +17,39 @@
 }
 
 .sidenav a {
-  padding: 8px 8px 8px;
   text-decoration: none;
-  font-size: 25px;
+  filter: grayscale(100%) opacity(0.7);
+  transition: 600ms;
+}
+
+.sidenav a:hover {
+  filter: grayscale(0%) opacity(1);
+  color: #ececec;
+}
+
+.sidenav .nav-link {
+  padding: 8px 8px 8px;
+  font-size: 20px;
   color: #b6b6b6;
   display: flex;
-  height: 5rem;
+  align-items: center;
   text-decoration: none;
   filter: grayscale(100%) opacity(0.7);
   transition: 600ms;
 }
 
 .sidenav .nav-link img {
+  z-index: 0;
   margin-left: 0.5rem;
+  margin-bottom: 1rem;
+  align-self: center;
 }
 
 .sidenav .nav-link:hover {
   filter: grayscale(0%) opacity(1);
   background: #141418;
   color: #ececec;
-  height: 5rem;
+  cursor: pointer;
 }
 
 .sidenav #contact a {
@@ -48,13 +61,7 @@
 
 .sidenav #contact .fab {
   color: #b6b6b6;
-  filter: grayscale(100%) opacity(0.7);
-  transition: 600ms;
-}
-
-.sidenav #contact .fab:hover {
-  filter: grayscale(0%) opacity(1);
-  color: #ececec;
+  font-size: 32px;
 }
 
 .sidenav .closebtn {

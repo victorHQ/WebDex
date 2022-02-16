@@ -1,0 +1,41 @@
+.searchBox {
+  margin: 2rem;
+  padding: 10px;
+  border-radius: 0.5rem;
+  background: #2f3640;
+}
+
+.searchInput {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  width: 4rem;
+  padding: 0 6px;
+}
+
+.searchInput:hover {
+  width: 10rem;
+}
+
+.searchInput:focus {
+  width: 10rem;
+}
+
+@media screen and (max-width: 620px) {
+  .searchBox > .searchInput {
+    width: 4rem;
+    padding: 0 6px;
+  }
+  .searchBox > .searchInput:focus {
+    width: 9.5rem;
+  }
+  .searchBox:hover > .searchInput {
+    width: 9.5rem;
+    padding: 0 6px;
+  }
+}
+/*# sourceMappingURL=search-bar.css.map */

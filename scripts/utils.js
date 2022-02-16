@@ -24,13 +24,12 @@ export default class Utils {
     
     addLoader(){
         //Hide pokemon container loading
-        this.pokeContainer.style.visibility = "hidden";
+        this.pokeContainer.style.display = 'none';
 
         if(!this.loader.querySelector('.wrapper')) 
             this.loader.innerHTML += ` 
                 <div class="wrapper">
-                    <div class="pokeball">
-                    </div>
+                    <div class="pokeball"></div>
                 </div>
             `;
     
@@ -42,7 +41,7 @@ export default class Utils {
         if(this.load) this.load.remove();
     
         //Show pokemon container after loading
-        this.pokeContainer.style.visibility = "visible";
+        this.pokeContainer.style.display = 'flex';
     }
     
     scrollToTop(){

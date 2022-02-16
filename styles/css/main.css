@@ -9,7 +9,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
   margin: 0;
   padding-bottom: 100px;
   color: black;
@@ -30,6 +29,11 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-thumb:hover {
   background: #6649b8;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
 }
 
 #main {
