@@ -45,7 +45,7 @@ export default class Pokedex{
                 bug: '#a8b820',
                 dragon: '#53a4cf',
                 psychic: '#f366b9',
-                flying: '90deg, #bdb9b8 50%, #bee0ec 50%', 
+                flying: 'linear-gradient(90deg, #bdb9b8 50%, #bee0ec 50%)', 
                 fighting: '#c03028',
                 normal: '#a8a878',
                 ice: '#98d8d8',
@@ -75,41 +75,49 @@ export default class Pokedex{
     } 
 
     async getPokemon(id) {
-        this.url = `https://pokeapi.co/api/v2/pokemon/${id}`; //Pokeapi with the specific pokemon json
-        this.res = await fetch(this.url); //Request
-        this.pokemon = await this.res.json(); //Response
-        this.createPokemonCard(this.pokemon);
+        const url = `https://pokeapi.co/api/v2/pokemon/${id}`; //Pokeapi with the specific pokemon json
+        const res = await fetch(url); //Request
+        const pokemon = await res.json(); //Response
+        this.createPokemonCard(pokemon);
     }
 
     createPokemonCard(pokemon){
-        this.pokemonProperties = pokemon;
-        this.pokemonEl = document.createElement('div');
-        this.pokemonEl.classList.add('pokemon');
+        const pokemonProperties = pokemon;
+        const pokemonEl = document.createElement('div');
+        pokemonEl.classList.add('pokemon');
+
 
         //Get as pokemon properties
-        this.pokeTypes = this.pokemonProperties.types.map(type => type.type.name); //Types
-        this.type = this.mainTypes.find(type => this.pokeTypes.indexOf(type) > -1); //Main type
-        this.name = this.pokemonProperties.name[0].toUpperCase() + this.pokemonProperties.name.slice(1); //Name
-        this.color = this.colors[this.type]; //Color of card
+        const pokeTypes = pokemonProperties.types.map(type => type.type.name); //Types
+        const namePokemon = pokemonProperties.name[0].toUpperCase() + pokemonProperties.name.slice(1); //Name
+        const color = this.colors[pokeTypes[0]]; //Color of card
     
-        //Make sure it's flying type and assign the gradient 50%
-        if(this.color === this.colors.flying) this.pokemonEl.style.background = `linear-gradient(${this.color})`; 
-        else this.pokemonEl.style.backgroundColor = this.color;
+        pokemonEl.style.background = color;
         
         //Card created
         this.pokeInnerHTML = `
             <div class="img-container">
-                <img width="100%" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${this.pokemonProperties.id}.png" alt="${this.name}" title="${this.name}"/>
+                <img width="100%" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokemonProperties.id.toString().padStart(3, '0')}.png" alt="${namePokemon}" title="${namePokemon}"/>
             </div>
             <div class="info">
-                <span class="number">#${this.pokemonProperties.id.toString().padStart(3, '0')}</span>
-                <a href="https://www.pokemon.com/br/pokedex/${this.pokemonProperties.id}" target="_blank" class="name" title="${this.name}"><h3 class="name">${this.name}</h3></a>
-                <small class="type">Type: <span>${this.type}</span></small>
+                <span class="number">#${pokemonProperties.id.toString().padStart(3, '0')}</span>
+                <a href="https://www.pokemon.com/br/pokedex/${pokemonProperties.id}" target="_blank" class="name" title="${namePokemon}"><h3 class="name">${namePokemon}</h3></a>
+                <div class="type">${this.pokemonTypes(pokeTypes)}</div>
             </div>
         `;
 
-        this.pokemonEl.innerHTML = this.pokeInnerHTML;
-        this.utils.pokeContainer.appendChild(this.pokemonEl);
+        pokemonEl.innerHTML = this.pokeInnerHTML;
+        this.utils.pokeContainer.appendChild(pokemonEl);
+    }
+
+    pokemonTypes(pokeTypes){
+        let span1 = `<span class="card-type" style="background: ${this.colors[pokeTypes[0]]};">${pokeTypes[0]}</span>`;
+        let span2 = `<span class="card-type" style="background: ${this.colors[pokeTypes[1]]};">${pokeTypes[1]}</span>`;
+
+        if(pokeTypes[1]){
+            return span1 + span2;
+        } else 
+            return span1;
     }
 
     //Select Dex by regions

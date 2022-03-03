@@ -94,6 +94,22 @@ h1 {
 
     .info {
       margin-top: 20px;
+
+      .type{
+        @include organize-center;
+      }
+
+      .card-type{
+        border-radius: 3px;
+        line-height: 18px;
+        max-width: 110px;
+        margin: 0 1.5625% 0 0;
+        width: 38.4375%;
+        text-transform: none;
+        font-size: 11px;
+        text-align: center;
+        border: 2px solid;
+      }
     }
 
     .number {
@@ -121,7 +137,7 @@ h1 {
   }
 }
 
-@media screen and (max-width: 639px) {
+@media only screen and (max-width: 960px){
   h1 {
     font-size: 2.5rem;
   }
