@@ -107,5 +107,14 @@
   .mySidenav {
     width: 25%;
   }
+  .sidenav .nav-link {
+    justify-content: center;
+    font-size: 25px;
+    padding: 8px;
+  }
+  .nav-link img {
+    margin-left: 0;
+    display: none;
+  }
 }
 /*# sourceMappingURL=nav-bar.css.map */

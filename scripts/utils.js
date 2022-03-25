@@ -23,8 +23,7 @@ export default class Utils {
     }     
     
     addLoader(){
-        //Hide pokemon container loading
-        this.pokeContainer.style.display = 'none';
+        document.querySelector("#title-pokedex").style.marginBottom = '0.3em';
 
         if(!this.loader.querySelector('.wrapper')) 
             this.loader.innerHTML += ` 
@@ -32,16 +31,13 @@ export default class Utils {
                     <div class="pokeball"></div>
                 </div>
             `;
-    
-        if(this.main.style.marginLeft === "250px") document.querySelector(".wrapper").style.marginLeft = "125px";
     }
 
     removeLoader(){
         this.load = this.loader.querySelector('.wrapper');
         if(this.load) this.load.remove();
-    
-        //Show pokemon container after loading
-        this.pokeContainer.style.display = 'flex';
+
+        document.querySelector("#title-pokedex").style.marginBottom = '0%';
     }
     
     scrollToTop(){

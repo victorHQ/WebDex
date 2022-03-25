@@ -103,6 +103,7 @@
   .sidenav {
     padding-top: 15px;
   }
+
   .sidenav a {
     font-size: 18px;
   }
@@ -111,5 +112,18 @@
 @media screen and (max-width: 450px) {
   .mySidenav {
     width: 25%;
+  }
+
+  .sidenav .nav-link {
+    justify-content: center; 
+
+    font-size: 25px;
+    padding: 8px;
+  }
+
+  .nav-link img {
+    margin-left: 0;
+
+    display: none;
   }
 }

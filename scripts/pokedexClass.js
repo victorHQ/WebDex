@@ -86,18 +86,18 @@ export default class Pokedex{
         const pokemonEl = document.createElement('div');
         pokemonEl.classList.add('pokemon');
 
-
         //Get as pokemon properties
         const pokeTypes = pokemonProperties.types.map(type => type.type.name); //Types
         const namePokemon = pokemonProperties.name[0].toUpperCase() + pokemonProperties.name.slice(1); //Name
         const color = this.colors[pokeTypes[0]]; //Color of card
+        const sprite = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"
     
         pokemonEl.style.background = color;
         
         //Card created
         this.pokeInnerHTML = `
             <div class="img-container">
-                <img width="100%" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokemonProperties.id.toString().padStart(3, '0')}.png" alt="${namePokemon}" title="${namePokemon}"/>
+                <img width="100%" src="${sprite + pokemonProperties.id + ".png"}" alt="${namePokemon}" title="${namePokemon}"/>
             </div>
             <div class="info">
                 <span class="number">#${pokemonProperties.id.toString().padStart(3, '0')}</span>
