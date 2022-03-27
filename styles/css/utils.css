@@ -13,13 +13,33 @@ html {
   bottom: 15px;
   right: 20px;
   font-size: 50px;
-  cursor: pointer;
   transition: 600ms;
+  cursor: pointer;
   color: #89d1d4;
 }
 
 #scroll-to-top:hover {
   color: #89a3d4;
+}
+
+/* Progress Bar Scroll */
+#progress-container {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+#progress-bar-container {
+  width: 100%;
+  height: 8px;
+}
+
+#progress-bar {
+  height: 4px;
+  background-image: linear-gradient(90deg, #a258ff, #89d1d4);
+  width: 0%;
+  border-radius: 2px;
 }
 
 @media screen and (max-width: 1045px) {

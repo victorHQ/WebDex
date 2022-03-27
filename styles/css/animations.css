@@ -7,4 +7,16 @@
     transform: rotate(360deg);
   }
 }
+
+/* Animate Cards on Loading */
+@keyframes animateleft {
+  from {
+    left: -300px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
 /*# sourceMappingURL=animations.css.map */

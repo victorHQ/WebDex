@@ -5,11 +5,11 @@ class App{
         this.pokedex = new Pokedex();
     }
 
-    initiPokedex(){
+    initPokedex(){
         this.pokedex.fetchPokemons();
         this.pokedex.selectPokemonRegions();
     }
 }
 
 const app = new App();
-app.initiPokedex();
+app.initPokedex();

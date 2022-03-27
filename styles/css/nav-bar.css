@@ -30,6 +30,7 @@
 .sidenav .nav-link {
   padding: 8px 8px 8px;
   font-size: 20px;
+  height: 60px;
   color: #b6b6b6;
   display: flex;
   align-items: center;
@@ -70,6 +71,7 @@
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+  color: #bfbfbf;
 }
 
 .sidenav .closebtn:hover {
@@ -107,6 +109,9 @@
   .mySidenav {
     width: 25%;
   }
+  .sidenav {
+    overflow: hidden;
+  }
   .sidenav .nav-link {
     justify-content: center;
     font-size: 25px;
@@ -115,6 +120,12 @@
   .nav-link img {
     margin-left: 0;
     display: none;
+  }
+}
+
+@media screen and (max-width: 450px) and (max-width: 320px) {
+  .sidenav .nav-link {
+    height: 40px;
   }
 }
 /*# sourceMappingURL=nav-bar.css.map */

@@ -3,7 +3,7 @@ import Utils from "./utils.js";
 export default class Pokedex{
     constructor(){
         this.utils = new Utils(); //Instance of Utils.
-        this.utils.scrollToTop(); 
+        this.utils.scrollToTop();
         let pokemonNUMBER = 151; //Private variable for length of pokemonNumber.
         let pokemonIndex = 1; //Private variable for the national dex index.
         Object.defineProperty(this, 'pokemonNumber', {
@@ -90,7 +90,7 @@ export default class Pokedex{
         const pokeTypes = pokemonProperties.types.map(type => type.type.name); //Types
         const namePokemon = pokemonProperties.name[0].toUpperCase() + pokemonProperties.name.slice(1); //Name
         const color = this.colors[pokeTypes[0]]; //Color of card
-        const sprite = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"
+        const sprite = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/";
     
         pokemonEl.style.background = color;
         

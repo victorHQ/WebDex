@@ -1,9 +1,14 @@
 @import './variablesAndMixins.scss';
+@import './animations.scss';
 
 /* Global */
 * {
   box-sizing: border-box;
   font-family: "Open Sans";
+}
+
+html{
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -39,6 +44,8 @@ body {
 header{
   display: flex;
   justify-content: space-between;
+
+  height: 10%;
 }
 
 #main {
@@ -52,6 +59,8 @@ h1 {
   opacity: 0.4;
   font-size: 5rem;
   text-align: center;
+
+  margin-top: -10px;
 
   transition: $transition-speed;
 }
@@ -71,6 +80,10 @@ h1 {
     padding: 20px;
     text-align: center;
     max-width: 160px;
+
+    /* Animation of cards */
+    position:relative;
+    animation: animateleft 1s;
 
     &:hover {
       transition: all 0.2s ease-out;
