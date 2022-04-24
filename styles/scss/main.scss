@@ -82,8 +82,8 @@ h1 {
     max-width: 160px;
 
     /* Animation of cards */
-    position:relative;
-    animation: animateleft 1s;
+    position: relative;
+    animation: animateleft .3s ease-in-out;
 
     &:hover {
       transition: all 0.2s ease-out;

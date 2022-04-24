@@ -23,9 +23,34 @@
     <!-- Design inspired by this Dribbble shot: https://dribbble.com/shots/5611109--Pokemon -->
     <header>
       <span class="open-nav" onclick="openNav()">&#9776;</span>
-      
-      <div class="searchBox">
-        <input class="searchInput"type="text" name="search" onkeyup="searchPokemons()" placeholder="Search...">
+
+      <div class="filter-box">
+        <div class="select">
+          <select title="Types" onChange="filterTypes(this)">
+            <option selected>All</option>
+            <option>Fire</option>
+            <option>Grass</option>
+            <option>Water</option>
+            <option>Ground</option>
+            <option>Rock</option>
+            <option>Steel</option>
+            <option>Ghost</option>
+            <option>Dark</option>
+            <option>Fairy</option>
+            <option>Normal</option>
+            <option>Eletric</option>
+            <option>Fighting</option>
+            <option>Psychic</option>
+            <option>Ice</option>
+            <option>Flying</option>
+            <option>Bug</option>
+            <option>Poison</option>
+            <option>Dragon</option>
+          </select>
+        </div>
+        <div class="searchBox">
+          <input class="searchInput"type="text" name="search" onkeyup="searchPokemons()" placeholder="Search...">      
+        </div>
       </div>
     </header>
 
@@ -112,7 +137,7 @@
     </div>
 
     <main id="main">
-      <h1 id="title-pokedex">PokeDex</h1>
+      <h1 id="title-pokedex">PokeDex</h1> 
       
       <div id="loader"></div>
 

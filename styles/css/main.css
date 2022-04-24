@@ -95,7 +95,7 @@ h1 {
   max-width: 160px;
   /* Animation of cards */
   position: relative;
-  animation: animateleft 1s;
+  animation: animateleft .3s ease-in-out;
 }
 
 .poke-container .pokemon:hover {

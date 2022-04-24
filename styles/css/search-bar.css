@@ -1,7 +1,12 @@
+.filter-box {
+  display: flex;
+  align-items: center;
+}
+
 .searchBox {
-  margin: 2rem;
+  margin: 2rem 2rem 2rem 0rem;
   padding: 10px;
-  border-radius: 0.5rem;
+  border-radius: 0rem 0.5rem 0.5rem 0rem;
   background: #2f3640;
 }
 
@@ -25,6 +30,52 @@
   width: 10rem;
 }
 
+select {
+  /* Reset Select */
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  color: #fff;
+  background-color: #2c3e50;
+  cursor: pointer;
+}
+
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: flex;
+  width: 2.5em;
+  height: 2.8em;
+  border-radius: 0.5em 0rem 0rem 0.5rem;
+  overflow: hidden;
+}
+
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.8em;
+  background-color: #34495e;
+  transition: 0.25s all ease;
+  pointer-events: none;
+}
+
+/* Transition */
+.select:hover::after {
+  color: #89d1d4;
+}
+
 @media screen and (max-width: 620px) {
   .searchBox > .searchInput {
     width: 4rem;
@@ -32,6 +83,9 @@
   }
   .searchBox > .searchInput:focus {
     width: 7rem;
+  }
+  .select {
+    width: 2.5em;
   }
   .searchBox:hover > .searchInput {
     width: 7rem;
