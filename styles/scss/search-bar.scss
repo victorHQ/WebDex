@@ -4,25 +4,27 @@
 }
 
 .searchBox {
-  margin: 2rem 2rem 2rem 0rem;
-  padding: 10px;
+  margin: 2rem 2rem 1rem 0rem;
   border-radius: 0rem 0.5rem 0.5rem 0rem;
 
   background: #2f3640;
 }
 
 .searchInput {
-  border: none;
   background: none;
   outline: none;
   float: left;
+  border: none;
+  border-radius: 0rem 0.5rem 0.5rem 0rem;
 
+  box-shadow: 0 1px 3px -2px #9098A9;
   color: white;
-
   font-size: 16px;
-  transition: 0.4s;
+  
   width: 4rem;
   padding: 0 6px;
+  height: 2.6rem;
+  transition: all .2s ease;
 
   &:hover {
     width: 10rem;
@@ -30,6 +32,10 @@
 
   &:focus {
     width: 10rem;
+    
+    border: 1px solid #E8EAED;
+    border-color: #0077FF;
+    box-shadow: 0 0 0 4px rgba(#0077FF, .2);
   }
 }
 
@@ -58,11 +64,15 @@ select::-ms-expand {
 .select {
   position: relative;
   display: flex;
+  margin-top: 1rem;
   width: 2.5em;
   height: 2.8em;
   border-radius: 0.5em 0rem 0rem 0.5rem;
   overflow: hidden;
+
+  transition: all .2s ease;
 }
+
 /* Arrow */
 .select::after {
   content: "\25BC";
@@ -74,6 +84,7 @@ select::-ms-expand {
   transition: 0.25s all ease;
   pointer-events: none;
 }
+
 /* Transition */
 .select:hover::after {
   color: #89d1d4;

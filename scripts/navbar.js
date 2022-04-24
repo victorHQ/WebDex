@@ -4,6 +4,7 @@ function openNav() {
     document.getElementById("main").style.marginLeft = "250px";
   } else {
     document.getElementById("mySidenav").style.width = "100%";
+    document.querySelector("body").style.overflow = "hidden";
     clickedNavLinks();
   }
 }
@@ -12,6 +13,7 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginLeft = "0";
+  document.querySelector("body").style.overflow = "visible";
 }
 
 function clickedNavLinks() {

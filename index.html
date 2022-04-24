@@ -22,7 +22,7 @@
     <!-- partial:index.partial.html -->
     <!-- Design inspired by this Dribbble shot: https://dribbble.com/shots/5611109--Pokemon -->
     <header>
-      <span class="open-nav" onclick="openNav()">&#9776;</span>
+      <span class="open-nav" title="Regions" onclick="openNav()">&#9776;</span>
 
       <div class="filter-box">
         <div class="select">
@@ -38,7 +38,7 @@
             <option>Dark</option>
             <option>Fairy</option>
             <option>Normal</option>
-            <option>Eletric</option>
+            <option>Electric</option>
             <option>Fighting</option>
             <option>Psychic</option>
             <option>Ice</option>
@@ -49,7 +49,7 @@
           </select>
         </div>
         <div class="searchBox">
-          <input class="searchInput"type="text" name="search" onkeyup="searchPokemons()" placeholder="Search...">      
+          <input class="searchInput"type="text" name="search" title="Search pokemon" onkeyup="searchPokemons()" placeholder="Search...">      
         </div>
       </div>
     </header>
@@ -144,7 +144,7 @@
       <div id="poke_container" class="poke-container"></div>
     </main>
 
-    <a id="scroll-to-top"><i class="fas fa-angle-up"></i></a>
+    <a id="scroll-to-top" title="Back to the top"><i class="fas fa-angle-up"></i></a>
 
     <!-- Scripts -->
     <script src="./scripts/app.js" type="module"></script>
