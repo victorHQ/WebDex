@@ -25,7 +25,7 @@
   <img src="https://img.shields.io/static/v1?label=&message=SASS&color=f0a5ca&style=for-the-badge&logo=sass"/>
   <img src="https://img.shields.io/static/v1?label=&message=JavaScript&color=0d0c0c&style=for-the-badge&logo=JavaScript"/>
   <img src="https://img.shields.io/static/v1?label=&message=JSON&color=000000&style=for-the-badge&logo=JSON"/>
-  <a title="PokeAPI" href="https://pokeapi.co/"><img src="https://img.shields.io/static/v1?label=&message=PokeAPI&color=000000&style=for-the-badge&logo=pokemon"/></a>
+  <a title="PokeAPI" href="https://pokeapi.co/" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=PokeAPI&color=000000&style=for-the-badge&logo=pokemon"/></a>
 </p>
 
 <h2 id="project" align="center">
@@ -59,7 +59,7 @@
 </h2>
 <p align="center">
   Esse projeto está sob a licença MIT. Veja o arquivo <a href="LICENSE"> LICENSE </a> para mais detalhes.<br><br>
-  <a href="LICENSE"><img src="https://img.shields.io/static/v1?label=license&message=mit&color=green&style=for-the-badge&logo="/></a>   
+  <a href="LICENSE" target="_blank"><img src="https://img.shields.io/static/v1?label=license&message=mit&color=green&style=for-the-badge&logo="/></a>   
 </p>
 
-<p>  Site Oficial: https://www.pokemon.com/br/pokedex/ </p>
+<p>Site Oficial: https://www.pokemon.com/br/pokedex/ | Mobile version APP by <a href="https://github.com/renecfjunior" target="_blank">Rene</a>: <a href="https://github.com/renecfjunior/DexMobile" target="_blank">DexMobile<a/></p>
